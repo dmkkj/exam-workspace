@@ -1,5 +1,6 @@
 package com.kh.test5.model;
 
+// 우리 VO 만드는 방식 그대로 작성하시면 됩니다!!
 public class Food {
 
 	private String name;

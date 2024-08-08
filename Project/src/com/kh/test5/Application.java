@@ -9,6 +9,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		
+		// 화면 그대로 작성!
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Food> list = new ArrayList<>();
 		
@@ -22,7 +23,7 @@ public class Application {
 			System.out.print("번호 선택 : ");
 			
 			int number = Integer.parseInt(sc.nextLine());
-			
+			// switch 어렵다면 조건 if 사용
 			if(number == 1) {
 				System.out.print("추가할 음식 입력 : ");
 				String name = sc.nextLine();
@@ -43,6 +44,7 @@ public class Application {
 					}
 				}
 			} else if(number == 4) {
+				// 완전 종료! 
 				break;
 			}
 		
