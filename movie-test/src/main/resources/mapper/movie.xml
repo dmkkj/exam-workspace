@@ -1,0 +1,23 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.MovieMapper">
+	<!-- 영화 정보를 추가하는 Query문 -->
+	<insert id="insert" parameterType="Movie">
+		INSERT INTO movie (title, genre, actor) VALUES(#{title}, #{genre}, #{actor})
+	</insert>
+
+	<!-- 영화 목록을 보여주는 Query문 -->
+	<select id="selectAll" resultType="Movie">
+		SELECT * FROM movie
+	</select>
+	
+	 <!-- id로 영화 조회 
+	<select id="selectId" parameterType="int" resultType="Movie">
+		SELECT * FROM movie
+		WHERE id = #{id}
+	</select>
+	-->
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM movie WHERE id = #{id}
+	</delete>
+</mapper>
